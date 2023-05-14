@@ -13,23 +13,17 @@ presskit_download_link                    : https://emilbaehr.com               
 app_icon                                  : # assets/appicon.png                      # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
 app_name                                  : Wildhood                                          # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
 app_price                                 :                                           # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
-app_description                           : Write a short tagline for your app.
+app_description                           : Join the tribe, share the wild
 
 enable_smart_app_banner                   : true                                      # Set to true to show a smart app banner at top of page on mobile devices.
 
 
 
 # Information About Yourself
-your_name                                 : Emil Baehr                                
-your_link                                 : https://emilbaehr.com                     
-your_city                                 : Copenhagen                                
-email_address                             : emil.baehr@gmail.com
-facebook_username                         :                                           
-instagram_username                        : ebaehr
-twitter_username                          : ebaehr
-github_username                           : emilbaehr
-youtube_username                          :
-mastodon_link                             : https://mastodon.social/@ebaehr
+your_name                                 : Wildhood                                                          
+email_address                             : wildcampadvisor@gmail.com                                        
+instagram_username                        : the.wildhood
+
 
 
 
@@ -118,8 +112,6 @@ footer_text_color                         : "#666666"
 
 
 
-
-
 ####################################################
 ### Jekyll Configuration. No need to touch this. ###
 ####################################################
@@ -141,3 +133,5 @@ collections:
 
 # Markdown rendering
 markdown: kramdown
+
+theme: minima
