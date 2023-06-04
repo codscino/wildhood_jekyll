@@ -1,3 +1,36 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Device Detection</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+  <script>
+    function detectDevice() {
+      var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      
+      if (/android/i.test(userAgent)) {
+        return "Android";
+      }
+      
+      if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+      }
+      
+      return "Other";
+    }
+    
+    window.onload = function() {
+      var deviceType = detectDevice();
+      document.getElementById("device-type").textContent = deviceType;
+    };
+  </script>
+</head>
+<body>
+  <h1>Welcome!</h1>
+  <p>Your device type: <span id="device-type"></span></p>
+</body>
+</html>
