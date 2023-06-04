@@ -7,6 +7,20 @@
       text-align: center;
       font-family: Arial, sans-serif;
     }
+    
+    #app-buttons {
+      margin-top: 20px;
+    }
+    
+    #app-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #007bff;
+      border-radius: 4px;
+    }
   </style>
   <script>
     function detectDevice() {
@@ -23,14 +37,41 @@
       return "Other";
     }
     
+    function redirect() {
+      var deviceType = detectDevice();
+      
+      if (deviceType === "iOS") {
+        setTimeout(function() {
+          window.location.href = "https://apps.apple.com/us/app/alltrails-hike-bike-run/id405075943";
+        }, 10000);
+      }
+      
+      if (deviceType === "Android") {
+        setTimeout(function() {
+          window.location.href = "https://play.google.com/store/apps/details?id=com.alltrails.alltrails&hl=it&gl=US";
+        }, 10000);
+      }
+    }
+    
     window.onload = function() {
       var deviceType = detectDevice();
       document.getElementById("device-type").textContent = deviceType;
+      
+      if (deviceType === "Other") {
+        document.getElementById("app-buttons").style.display = "block";
+      } else {
+        redirect();
+      }
     };
   </script>
 </head>
 <body>
   <h1>Welcome!</h1>
   <p>Your device type: <span id="device-type"></span></p>
+  
+  <div id="app-buttons" style="display: none;">
+    <a href="https://apps.apple.com/us/app/alltrails-hike-bike-run/id405075943">App Store</a>
+    <a href="https://play.google.com/store/apps/details?id=com.alltrails.alltrails&hl=it&gl=US">Play Store</a>
+  </div>
 </body>
 </html>
